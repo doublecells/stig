@@ -1,0 +1,252 @@
+/*
+ |
+ |	Database and Table Management Script Template
+ |
+ |	Author:
+ |	Date:
+ |	Description:
+ |
+ |	Modified By:
+ |	Date:
+ |	Description:
+ |	
+ */
+ 
+ -- #Show all character set types.
+ -- SHOW CHARACTER SET;
+ --
+ -- #Show all collation types.
+ -- SHOW COLLATION;
+ --
+ -- #Show create specified database script.
+ -- SHOW CREATE DATABASE <Database_Name>;
+ --
+ -- #Show create specified table script.
+ -- SHOW CREATE DATABASE <Database_name>.<Table_name>;
+ --
+ -- #Show create specified view script.
+ -- SHOW CREATE VIEW <Database_name>.<View_name>;
+ --
+ -- #Show all databases information.
+ -- SHOW DATABASES;
+ --
+ -- #Show all databases information.
+ -- SHOW SCHEMAS;
+ --
+ -- #Show all tables in specific database.
+ -- SHOW TABLES FROM <Database_name>;
+ --
+ -- #Show status of specific table.
+ -- SHOW TABLE STATUS FROM <Database_name> LIKE '%<Table_name>%';
+ --
+ -- #Show indexes|keys in specified table.
+ -- SHOW INDEXES FROM <Database_name>.<Table_name>;
+ --
+ -- #Show views in database.
+ -- SHOW FULL TABLES FROM <Database_name> WHERE TABLE_TYPE = 'VIEW';
+ --
+ -- #Show all columns information of table
+ -- DESCRIBE <Database_name>.<Table_name>;
+ -- #Show specific columns information of table
+ -- DESCRIBE <Database_name>.<Table_name> LIKE '%<Column_name>%';
+ --
+ -- #Create shcema, synonymous with create database.
+ -- CREATE SCHEMA IF NOT EXISTS <Database_name>;
+ --
+ -- #Create database 
+ -- CREATE DATABASE IF NOT EXISTS <Database_name> 
+ -- CHARACTER SET <Charset_name>
+ -- COLLATE <Collation_name>;
+ --
+ -- #Create table
+ -- CREATE TABLE IF NOT EXISTS <Table_name>
+ -- (
+ --		--# bigint, int, float, double, decimal(precision,scale), numeric(precision,scale)
+ --    	<Column_name> bigint NULL 
+ --    	<Column_name> bigint NOT NULL
+ --    	<Column_name> bigint NOT NULL AUTO_INCREMENT
+ --
+ --    	<Column_name> int NULL
+ --    	<Column_name> int NOT NULL
+ --    	<Column_name> int NOT NULL AUTO_INCREMENT
+ --
+ --    	<Column_name> float NULL
+ --    	<Column_name> float NOT NULL
+ --
+ --    	<Column_name> double NULL
+ --    	<Column_name> double NOT NULL 
+ --
+ --    	<Column_name> decimal(<Precision>,<Scale>) NULL 
+ --    	<Column_name> decimal(<Precision>,<Scale>) NOT NULL
+ --
+ --    	<Column_name> numeric(<Precision>,<Scale>) NULL 
+ --    	<Column_name> numeric(<Precision>,<Scale>) NOT NULL
+ --
+ --    	--# date, datetime(length), timestamp(length)
+ --    	<Column_name> date NULL
+ --    	<Column_name> date NOT NULL
+ --
+ --    	<Column_name> datetime NULL
+ --    	<Column_name> datetime NOT NULL
+ --		--# length less than or equal 6
+ --		<Column_name> datetime(<Length>) NULL 
+ --		<Column_name> datetime(<Length>) NOT NULL
+ --
+ --    	<Column_name> timestamp NULL 
+ --		<Column_name> timestamp NOT NULL 
+ --		--# length less than or equal 6
+ --		<Column_name> timestamp(<Length>) NULL 
+ -- 	<Column_name> timestamp(<Length>) NOT NULL
+ --
+ --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp
+ --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp
+ --		--# length less than or equal 6
+ --		<Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>)
+ --		<Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>) ON UPDATE current_timestamp(<Length>)
+ --
+ --    	--# char(length), varchar(length)
+ --    	<Column_name> char(<Length>) NULL
+ --    	<Column_name> char(<Length>) NOT NULL
+ --
+ --    	<Column_name> varchar(<Length>) NULL
+ --	   	<Column_name> varchar(<Length>) NOT NULL 
+ --
+ --    	--# varbinary(length)
+ --    	<Column_name> varbinary(<Length>) NULL 
+ --    	<Column_name> varbinary(<Length>) NOT NULL
+ --
+ --    	--# blob, text, longblob, longtext
+ --    	<Column_name> blob NULL
+ --    	<Column_name> text NULL
+ --    	<Column_name> longblob NULL
+ --    	<Column_name> longtext NULL
+ --  ) 
+ --	 CHARACTER SET <Charset_name>
+ --	 COLLATE <Collation_name>
+ --	 ENGINE = <Type>;
+ --
+ --  #Create table with primary key
+ --  CREATE TABLE IF NOT EXISTS <Table_name>
+ --  (
+ --		<Column_name> bigint NOT NULL AUTO_INCREMENT, 
+ -- 	<Column_name> varchar(<Length>) NOT NULL, 
+ --		<Column_name> datetime NULL,
+ --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp,
+ --
+ -- 	CONSTRAINT PK_<Table_name> PRIMARY KEY CLUSTERED 
+ --		(
+ --			<Column_name> ASC
+ --		)
+ --  )
+ --	 CHARACTER SET <Charset_name>
+ --	 COLLATE <Collation_name>
+ --	 ENGINE = <Type_name>;
+ --
+ --  #Create table with primary key, unique key
+ --  CREATE TABLE IF NOT EXISTS <Table_name> 
+ --  (
+ --		<Column_name> bigint NOT NULL AUTO_INCREMENT, 
+ -- 	<Column_name> varchar(<Length>) NOT NULL, 
+ --		<Column_name> datetime NULL,
+ --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp,
+ --
+ -- 	CONSTRAINT PK_<Table_name> PRIMARY KEY CLUSTERED 
+ --		(
+ --			<Column_name> ASC
+ --		),
+ --		UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>)
+ --  )
+ --	 CHARACTER SET <Charset_name>
+ --	 COLLATE <Collation_name>
+ --	 ENGINE = <Type_name>; 
+ 
+ --	 #Create table with primary key, unique key, index key
+ --  CREATE TABLE IF NOT EXISTS <Table_name> 
+ --  (
+ --		<Column_name> bigint NOT NULL AUTO_INCREMENT, 
+ -- 	<Column_name> varchar(<Length>) NOT NULL, 
+ --		<Column_name> datetime NULL,
+ --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp,
+ --
+ -- 	CONSTRAINT PK_<Table_name> PRIMARY KEY CLUSTERED 
+ --		(
+ --			<Column_name> ASC
+ --		),
+ --		UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>),
+ --		INDEX IX_<Table_name>_<Column_name> (<Column_name>)
+ --  )
+ --	 CHARACTER SET <Charset_name>
+ --	 COLLATE <Collation_name>
+ --	 ENGINE = <Type_name>; 
+ 
+ --	 #Create table with primary key, unique key, index key, foreign key
+ --  CREATE TABLE IF NOT EXISTS <Table_name> 
+ --  (
+ --		<Column_name> bigint NOT NULL AUTO_INCREMENT, 
+ -- 	<Column_name> varchar(<Length>) NOT NULL, 
+ --		<Column_name> datetime NULL,
+ --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp,
+ --
+ -- 	CONSTRAINT PK_<Table_name> PRIMARY KEY CLUSTERED 
+ --		(
+ --			<Column_name> ASC
+ --		),
+ --		UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>),
+ --		INDEX IX_<Table_name>_<Column_name> (<Column_name>),
+ -- 	FOREIGN KEY FK_<Table_name>_<Column_name> (<Column_name>) REFERNECES <Table_name> (<Column_name>)
+ --  )
+ --	 CHARACTER SET <Charset_name>
+ --	 COLLATE <Collation_name>
+ --	 ENGINE = <Type_name>;  
+ --
+ --  #Alter table
+ --  #Alter table to add unique index key.
+ --  ALTER TABLE <Table_name> 
+ --  ADD CONSTRAINT PK_<Table_name>_<Column_name> PRIMARY KEY CLUSTERED (<Column_name> ASC);
+ --
+ --  #Alter table to add unique index key.
+ --	 ALTER TABLE <Table_name>
+ --  ADD UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>);
+ --
+ --  #Alter table to add foreign key.
+ --  ALTER TABLE <Table_name> 
+ --  ADD FOREIGN KEY FK_<Table_name>_<Column_name> (<Column_name>) REFERENCES <Table_name_2> (<Column_name>);
+ --   
+ --  #Alter table to add new column data type.
+ --	 ALTER TABLE <Table_name> 
+ --  ADD <Column_name> <Data_type>(<Length>) NULL;
+ --
+ --  #Alter table column with/without default value.
+ --  ALTER TABLE <Table_name> 
+ --  ALTER COLUMN <Column_name> SET DEFAULT '<Default_value>';
+ --
+ --  #Alter table column definition
+ --  ALTER TABLE <Table_name> 
+ --  CHANGE COLUMN <Column_name_1> <Column_name_2> <Data_type>(<Length>) NULL;
+ -- 
+ --  #Alter table column definition
+ --  ALTER TABLE <Table_name>
+ --  MODIFY COLUMN <Column_name> <Data_type>(<Length>) NULL;
+ --
+ --  #Alter table to drop primary key.
+ --  ALTER TABLE <Table_name> 
+ --  CHANGE <Column_name> <Column_name> <Data_type>,
+ --  DROP PRIMARY KEY;
+ --
+ --  #Alter table to drop index key.
+ --	 ALTER TABLE <Table_name> 
+ --  DROP INDEX IX_<Table_name>_<Column_name>;
+ --
+ --  #Alter table to drop foreign key.
+ --  ALTER TABLE <Table_name>
+ --  DROP FOREIGN KEY FK_<Table_name>_<Column_name>;
+ --
+ --  #Alter table to drop column.
+ --  ALTER TABLE <Table_name> 
+ --  DROP COLUMN <Column_name>;
+ --
+ --  #Drop table
+ --  DROP TABLE <Table_name>;
+ --
+ --  #Drop database
+ --  DROP DATABASE <Database_name>;
