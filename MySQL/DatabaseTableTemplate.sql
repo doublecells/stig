@@ -93,16 +93,16 @@
  --     <Column_name> datetime(<Length>) NOT NULL
  --
  --    	<Column_name> timestamp NULL 
- --		<Column_name> timestamp NOT NULL 
+ --     <Column_name> timestamp NOT NULL 
  --     --# length less than or equal 6
- --	    <Column_name> timestamp(<Length>) NULL 
+ --     <Column_name> timestamp(<Length>) NULL 
  --     <Column_name> timestamp(<Length>) NOT NULL
- --
- --	    <Column_name> timestamp NOT NULL DEFAULT current_timestamp
- --	    <Column_name> timestamp NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp
+ -- 
+ --     <Column_name> timestamp NOT NULL DEFAULT current_timestamp
+ --     <Column_name> timestamp NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp
  --     --# length less than or equal 6
- --	    <Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>)
- --	    <Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>) ON UPDATE current_timestamp(<Length>)
+ --     <Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>)
+ --     <Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>) ON UPDATE current_timestamp(<Length>)
  --
  --    	--# char(length), varchar(length)
  --    	<Column_name> char(<Length>) NULL
@@ -121,26 +121,26 @@
  --    	<Column_name> longblob NULL
  --    	<Column_name> longtext NULL
  --  ) 
- --	 CHARACTER SET <Charset_name>
- --	 COLLATE <Collation_name>
- --	 ENGINE = <Type>;
+ --  CHARACTER SET <Charset_name>
+ --  COLLATE <Collation_name>
+ --  ENGINE = <Type>;
  --
  --  #Create table with primary key
  --  CREATE TABLE IF NOT EXISTS <Table_name>
  --  (
- --		<Column_name> bigint NOT NULL AUTO_INCREMENT, 
- -- 	<Column_name> varchar(<Length>) NOT NULL, 
- --		<Column_name> datetime NULL,
- --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp,
+ --     <Column_name> bigint NOT NULL AUTO_INCREMENT, 
+ --     <Column_name> varchar(<Length>) NOT NULL, 
+ --     <Column_name> datetime NULL,
+ --     <Column_name> timestamp NOT NULL DEFAULT current_timestamp,
  --
  -- 	CONSTRAINT PK_<Table_name> PRIMARY KEY CLUSTERED 
  --		(
  --			<Column_name> ASC
  --		)
  --  )
- --	 CHARACTER SET <Charset_name>
- --	 COLLATE <Collation_name>
- --	 ENGINE = <Type_name>;
+ --  CHARACTER SET <Charset_name>
+ --  COLLATE <Collation_name>
+ --  ENGINE = <Type_name>;
  --
  --  #Create table with primary key, unique key
  --  CREATE TABLE IF NOT EXISTS <Table_name> 
@@ -154,13 +154,13 @@
  --		(
  --			<Column_name> ASC
  --		),
- --		UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>)
+ --     UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>)
  --  )
- --	 CHARACTER SET <Charset_name>
- --	 COLLATE <Collation_name>
- --	 ENGINE = <Type_name>; 
+ --  CHARACTER SET <Charset_name>
+ --  COLLATE <Collation_name>
+ --  ENGINE = <Type_name>; 
  
- --	 #Create table with primary key, unique key, index key
+ --  #Create table with primary key, unique key, index key
  --  CREATE TABLE IF NOT EXISTS <Table_name> 
  --  (
  --     <Column_name> bigint NOT NULL AUTO_INCREMENT, 
@@ -182,10 +182,10 @@
  --	 #Create table with primary key, unique key, index key, foreign key
  --  CREATE TABLE IF NOT EXISTS <Table_name> 
  --  (
- --		<Column_name> bigint NOT NULL AUTO_INCREMENT, 
- -- 	<Column_name> varchar(<Length>) NOT NULL, 
- --		<Column_name> datetime NULL,
- --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp,
+ --     <Column_name> bigint NOT NULL AUTO_INCREMENT, 
+ --     <Column_name> varchar(<Length>) NOT NULL, 
+ --     <Column_name> datetime NULL,
+ --     <Column_name> timestamp NOT NULL DEFAULT current_timestamp,
  --
  -- 	CONSTRAINT PK_<Table_name> PRIMARY KEY CLUSTERED 
  --		(
@@ -213,7 +213,7 @@
  --  ADD FOREIGN KEY FK_<Table_name>_<Column_name> (<Column_name>) REFERENCES <Table_name_2> (<Column_name>);
  --   
  --  #Alter table to add new column data type.
- --	 ALTER TABLE <Table_name> 
+ --  ALTER TABLE <Table_name> 
  --  ADD <Column_name> <Data_type>(<Length>) NULL;
  --
  --  #Alter table column with/without default value.
