@@ -144,12 +144,12 @@
  --
  --  #Create table with primary key, unique key
  --  CREATE TABLE IF NOT EXISTS <Table_name> 
- --  (
- --		<Column_name> bigint NOT NULL AUTO_INCREMENT, 
- -- 	<Column_name> varchar(<Length>) NOT NULL, 
- --		<Column_name> datetime NULL,
- --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp,
- --
+ --  ( 
+ --     <Column_name> bigint NOT NULL AUTO_INCREMENT, 
+ --     <Column_name> varchar(<Length>) NOT NULL, 
+ --     <Column_name> datetime NULL,
+ --     <Column_name> timestamp NOT NULL DEFAULT current_timestamp,
+ -- 
  -- 	CONSTRAINT PK_<Table_name> PRIMARY KEY CLUSTERED 
  --		(
  --			<Column_name> ASC
