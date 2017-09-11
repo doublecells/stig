@@ -234,7 +234,7 @@
  --  DROP PRIMARY KEY;
  --
  --  #Alter table to drop index key.
- --	 ALTER TABLE <Table_name> 
+ --  ALTER TABLE <Table_name> 
  --  DROP INDEX IX_<Table_name>_<Column_name>;
  --
  --  #Alter table to drop foreign key.
