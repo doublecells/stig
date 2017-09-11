@@ -61,7 +61,7 @@
  -- #Create table
  -- CREATE TABLE IF NOT EXISTS <Table_name>
  -- (
- --		--# bigint, int, float, double, decimal(precision,scale), numeric(precision,scale)
+ --     --# bigint, int, float, double, decimal(precision,scale), numeric(precision,scale)
  --    	<Column_name> bigint NULL 
  --    	<Column_name> bigint NOT NULL
  --    	<Column_name> bigint NOT NULL AUTO_INCREMENT
@@ -88,28 +88,28 @@
  --
  --    	<Column_name> datetime NULL
  --    	<Column_name> datetime NOT NULL
- --		--# length less than or equal 6
- --		<Column_name> datetime(<Length>) NULL 
- --		<Column_name> datetime(<Length>) NOT NULL
+ --     --# length less than or equal 6
+ --     <Column_name> datetime(<Length>) NULL 
+ --     <Column_name> datetime(<Length>) NOT NULL
  --
  --    	<Column_name> timestamp NULL 
  --		<Column_name> timestamp NOT NULL 
- --		--# length less than or equal 6
- --		<Column_name> timestamp(<Length>) NULL 
- -- 	<Column_name> timestamp(<Length>) NOT NULL
+ --     --# length less than or equal 6
+ --	    <Column_name> timestamp(<Length>) NULL 
+ --     <Column_name> timestamp(<Length>) NOT NULL
  --
- --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp
- --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp
- --		--# length less than or equal 6
- --		<Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>)
- --		<Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>) ON UPDATE current_timestamp(<Length>)
+ --	    <Column_name> timestamp NOT NULL DEFAULT current_timestamp
+ --	    <Column_name> timestamp NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp
+ --     --# length less than or equal 6
+ --	    <Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>)
+ --	    <Column_name> timestamp(<Length>) NOT NULL DEFAULT current_timestamp(<Length>) ON UPDATE current_timestamp(<Length>)
  --
  --    	--# char(length), varchar(length)
  --    	<Column_name> char(<Length>) NULL
  --    	<Column_name> char(<Length>) NOT NULL
  --
  --    	<Column_name> varchar(<Length>) NULL
- --	   	<Column_name> varchar(<Length>) NOT NULL 
+ --     <Column_name> varchar(<Length>) NOT NULL 
  --
  --    	--# varbinary(length)
  --    	<Column_name> varbinary(<Length>) NULL 
