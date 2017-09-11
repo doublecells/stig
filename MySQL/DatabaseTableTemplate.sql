@@ -163,21 +163,21 @@
  --	 #Create table with primary key, unique key, index key
  --  CREATE TABLE IF NOT EXISTS <Table_name> 
  --  (
- --		<Column_name> bigint NOT NULL AUTO_INCREMENT, 
- -- 	<Column_name> varchar(<Length>) NOT NULL, 
- --		<Column_name> datetime NULL,
- --		<Column_name> timestamp NOT NULL DEFAULT current_timestamp,
+ --     <Column_name> bigint NOT NULL AUTO_INCREMENT, 
+ --     <Column_name> varchar(<Length>) NOT NULL, 
+ --     <Column_name> datetime NULL,
+ --     <Column_name> timestamp NOT NULL DEFAULT current_timestamp,
  --
  -- 	CONSTRAINT PK_<Table_name> PRIMARY KEY CLUSTERED 
  --		(
  --			<Column_name> ASC
  --		),
- --		UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>),
- --		INDEX IX_<Table_name>_<Column_name> (<Column_name>)
- --  )
- --	 CHARACTER SET <Charset_name>
- --	 COLLATE <Collation_name>
- --	 ENGINE = <Type_name>; 
+ --     UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>),
+ --     INDEX IX_<Table_name>_<Column_name> (<Column_name>)
+ --  ) 
+ --  CHARACTER SET <Charset_name>
+ --  COLLATE <Collation_name>
+ --  ENGINE = <Type_name>; 
  
  --	 #Create table with primary key, unique key, index key, foreign key
  --  CREATE TABLE IF NOT EXISTS <Table_name> 
@@ -191,13 +191,13 @@
  --		(
  --			<Column_name> ASC
  --		),
- --		UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>),
- --		INDEX IX_<Table_name>_<Column_name> (<Column_name>),
- -- 	FOREIGN KEY FK_<Table_name>_<Column_name> (<Column_name>) REFERNECES <Table_name> (<Column_name>)
+ --     UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>),
+ --     INDEX IX_<Table_name>_<Column_name> (<Column_name>),
+ --     FOREIGN KEY FK_<Table_name>_<Column_name> (<Column_name>) REFERNECES <Table_name> (<Column_name>)
  --  )
- --	 CHARACTER SET <Charset_name>
- --	 COLLATE <Collation_name>
- --	 ENGINE = <Type_name>;  
+ --  CHARACTER SET <Charset_name>
+ --  COLLATE <Collation_name>
+ --  ENGINE = <Type_name>;  
  --
  --  #Alter table
  --  #Alter table to add unique index key.
@@ -205,7 +205,7 @@
  --  ADD CONSTRAINT PK_<Table_name>_<Column_name> PRIMARY KEY CLUSTERED (<Column_name> ASC);
  --
  --  #Alter table to add unique index key.
- --	 ALTER TABLE <Table_name>
+ --  ALTER TABLE <Table_name>
  --  ADD UNIQUE KEY UX_<Table_name>_<Column_name> (<Column_name>);
  --
  --  #Alter table to add foreign key.
